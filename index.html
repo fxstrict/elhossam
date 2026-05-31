@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الحسام للمحاماة | المحامي حسام محمد ابراهيم– كافة فروع القانون</title>
+<meta name="description" content="مكتب الحسام للمحاماة – المحامي حسام محمد
+ابراهيم. خبرة قانونية متكاملة في جميع فروع القانون. استشارة قانونية فورية عبر
+واتساب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:        #c9a84c;
+  --gold-light:  #e8c97a;
+  --gold-dark:   #9a7530;
+  --navy:        #0d1b2a;
+  --navy-mid:    #1a2e44;
+  --navy-light:  #243b55;
+  --cream:       #faf6ee;
+  --cream-dark:  #f0e9d8;
+  --white:       #ffffff;
+  --text-light:  #c8d0da;
+  --text-muted:  #8a97a8;
+  --grad-gold:   linear-gradient(135deg, #c9a84c 0%, #e8c97a 50%, #c9a84c 100%);
+  --grad-navy:   linear-gradient(135deg, #0d1b2a 0%, #1a2e44 50%, #243b55 100%);
+  --grad-hero:   linear-gradient(135deg, #080f18 0%, #0d1b2a 40%, #162234 70%, #1a2e44 100%);
+  --shadow-gold: 0 8px 30px rgba(201,168,76,0.35);
+  --shadow-card: 0 10px 40px rgba(0,0,0,0.25);
+  --shadow-hover:0 20px 60px rgba(0,0,0,0.4);
+  --r: 14px;
+  --r-sm: 8px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--cream);
+  color:var(--navy);
+  overflow-x:hidden;
+  direction:rtl;
+}
+
+/* ─────── SCALES BACKGROUND ─────── */
+.scales-bg {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
+}
+.scales-bg svg {
+  position:absolute;
+  right:-80px; top:50%;
+  transform:translateY(-50%);
+  width:min(700px,80vw);
+  opacity:0.03;
+}
+
+/* ─────── HEADER ─────── */
+header {
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  background:rgba(13,27,42,0.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(201,168,76,0.18);
+  transition:all .3s;
+  padding:0 24px;
+}
+header.scrolled{
+  box-shadow:0 4px 30px rgba(0,0,0,0.5);
+}
+.header-inner{
+  max-width:1280px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:72px;
+  gap:16px;
+}
+.logo{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;flex-shrink:0;
+}
+.logo-scales{
+  width:48px;height:48px;
+  background:var(--grad-gold);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;
+  box-shadow:0 4px 18px rgba(201,168,76,0.45);
+  transition:.3s;
+}
+.logo:hover .logo-scales{transform:scale(1.08) rotate(-3deg);}
+.logo-text{line-height:1.15;}
+.logo-title{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:800;
+  color:var(--gold-light);
+  letter-spacing:.5px;
+}
+.logo-sub{font-size:10px;color:var(--text-muted);font-weight:500;letter-spacing:.8px;}
+
+nav{display:flex;gap:4px;align-items:center;}
+nav a{
+  text-decoration:none;
+  color:var(--text-light);
+  font-size:13px;font-weight:600;
+  padding:8px 13px;
+  border-radius:7px;
+  transition:all .2s;
+  white-space:nowrap;
+}
+nav a:hover{background:rgba(201,168,76,.12);color:var(--gold-light);}
+
+.btn-wa-header{
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;
+  padding:10px 20px;border-radius:50px;
+  font-size:13px;font-weight:700;
+  text-decoration:none;
+  display:flex;align-items:center;gap:7px;
+  transition:all .3s;white-space:nowrap;
+  box-shadow:0 4px 15px rgba(37,211,102,.35);
+}
+.btn-wa-header:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(37,211,102,.5);}
+
+.menu-toggle{
+  display:none;background:none;border:none;
+  cursor:pointer;padding:8px;
+  flex-direction:column;gap:5px;
+}
+.menu-toggle span{
+  display:block;width:24px;height:2.5px;
+  background:var(--gold);border-radius:2px;transition:.3s;
+}
+@media(max-width:960px){
+  nav{display:none;}
+  .menu-toggle{display:flex;}
+  nav.open{
+    display:flex;flex-direction:column;
+    position:fixed;top:72px;left:0;right:0;
+    background:var(--navy);
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    z-index:999;gap:4px;
+    border-bottom:2px solid var(--gold-dark);
+  }
+  nav.open a{padding:13px 16px;font-size:16px;color:var(--cream);}
+}
+
+/* ─────── HERO ─────── */
+.hero{
+  min-height:100vh;
+  background:var(--grad-hero);
+  position:relative;
+  overflow:hidden;
+  display:flex;align-items:center;
+  padding:100px 24px 60px;
+}
+
+/* lawyer photo as subtle background layer */
+.hero-photo-bg{
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:55%;
+  background:
+    linear-gradient(to right, transparent 60%, var(--navy) 100%),
+    linear-gradient(to top, var(--navy) 0%, transparent 30%),
+    url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=900&q=80') center/cover no-repeat;
+  opacity:.18;
+}
+/* decorative scales watermark */
+.hero-scales-mark{
+  position:absolute;
+  right:-60px;top:50%;
+  transform:translateY(-50%);
+  font-size:clamp(280px,35vw,500px);
+  opacity:.04;
+  color:var(--gold);
+  pointer-events:none;
+  user-select:none;
+  line-height:1;
+  font-family:serif;
+}
+
+.hero-glow{
+  position:absolute;
+  top:20%;left:10%;
+  width:400px;height:400px;
+  background:radial-gradient(circle,rgba(201,168,76,.08) 0%,transparent 70%);
+  border-radius:50%;
+  animation:glow 6s ease-in-out infinite;
+}
+@keyframes glow{0%,100%{transform:scale(1);}50%{transform:scale(1.3);}}
+
+.hero-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;
+  grid-template-columns:1.15fr 0.85fr;
+  gap:60px;align-items:center;
+  position:relative;z-index:2;
+}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(201,168,76,.12);
+  border:1px solid rgba(201,168,76,.35);
+  border-radius:50px;
+  padding:8px 20px;
+  font-size:13px;color:var(--gold-light);font-weight:700;
+  margin-bottom:22px;
+  animation:fadeInDown .8s ease;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4vw,56px);
+  font-weight:900;
+  color:var(--white);
+  line-height:1.25;
+  margin-bottom:18px;
+  animation:fadeInUp .9s ease .2s both;
+}
+.hero h1 span{
+  background:var(--grad-gold);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-name{
+  font-size:clamp(18px,2.2vw,26px);
+  font-weight:800;color:var(--gold-light);
+  margin-bottom:16px;
+  animation:fadeInUp .9s ease .3s both;
+  letter-spacing:.5px;
+}
+.hero-name span{color:var(--text-light);font-weight:400;font-size:14px;}
+.hero-desc{
+  font-size:clamp(14px,1.5vw,17px);
+  color:rgba(255,255,255,.78);
+  line-height:2;
+  margin-bottom:36px;
+  animation:fadeInUp .9s ease .4s both;
+}
+.hero-btns{
+  display:flex;gap:14px;flex-wrap:wrap;
+  animation:fadeInUp .9s ease .6s both;
+}
+.btn-gold{
+  background:var(--grad-gold);
+  color:var(--navy);
+  padding:16px 34px;border-radius:50px;
+  font-size:16px;font-weight:800;
+  text-decoration:none;transition:all .3s;
+  box-shadow:var(--shadow-gold);
+  display:inline-flex;align-items:center;gap:8px;
+  border:none;cursor:pointer;
+}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(201,168,76,.55);}
+.btn-outline-gold{
+  background:transparent;
+  color:var(--gold-light);
+  padding:16px 34px;border-radius:50px;
+  font-size:16px;font-weight:700;
+  text-decoration:none;
+  border:2px solid rgba(201,168,76,.45);
+  transition:all .3s;
+  display:inline-flex;align-items:center;gap:8px;
+  backdrop-filter:blur(10px);
+}
+.btn-outline-gold:hover{background:rgba(201,168,76,.1);transform:translateY(-3px);border-color:var(--gold);}
+
+.hero-stats{
+  display:flex;gap:30px;margin-top:44px;flex-wrap:wrap;
+  animation:fadeInUp .9s ease .8s both;
+}
+.stat-item{text-align:center;}
+.stat-num{
+  font-family:'Playfair Display',serif;
+  font-size:32px;font-weight:900;
+  background:var(--grad-gold);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  line-height:1;
+}
+.stat-label{font-size:11px;color:rgba(255,255,255,.6);margin-top:5px;font-weight:600;}
+
+/* lawyer portrait card */
+.hero-portrait{
+  display:flex;justify-content:center;align-items:center;
+  animation:fadeInRight 1s ease .3s both;
+}
+.portrait-frame{
+  position:relative;
+  width:320px;
+}
+.portrait-ring{
+  width:300px;height:360px;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  background:linear-gradient(160deg,rgba(201,168,76,.25),rgba(201,168,76,.05));
+  border:2px solid rgba(201,168,76,.3);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.5), inset 0 0 40px rgba(201,168,76,.06);
+}
+/* placeholder lawyer silhouette via CSS */
+.portrait-silhouette{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding-bottom:10px;
+}
+.sil-head{
+  width:80px;height:80px;
+  background:linear-gradient(160deg,rgba(201,168,76,.4),rgba(201,168,76,.15));
+  border-radius:50%;
+  margin-bottom:0;
+  border:2px solid rgba(201,168,76,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:36px;
+}
+.sil-body{
+  width:160px;height:200px;
+  background:linear-gradient(160deg,rgba(201,168,76,.2),rgba(201,168,76,.05));
+  border-radius:80px 80px 20px 20px;
+  border:1px solid rgba(201,168,76,.15);
+  margin-top:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:60px;opacity:.6;
+}
+.portrait-badge{
+  position:absolute;
+  bottom:-16px;left:50%;transform:translateX(-50%);
+  background:var(--grad-gold);
+  color:var(--navy);
+  padding:10px 28px;border-radius:50px;
+  font-size:13px;font-weight:800;
+  white-space:nowrap;
+  box-shadow:0 6px 20px rgba(201,168,76,.5);
+  letter-spacing:.5px;
+}
+.portrait-decor{
+  position:absolute;
+  top:10px;right:-10px;
+  width:60px;height:60px;
+  border:2px solid rgba(201,168,76,.3);
+  border-radius:50%;
+  opacity:.5;
+}
+.portrait-decor2{
+  position:absolute;
+  bottom:50px;left:-20px;
+  width:40px;height:40px;
+  border:2px solid rgba(201,168,76,.25);
+  border-radius:50%;
+  opacity:.4;
+}
+
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInRight{from{opacity:0;transform:translateX(50px);}to{opacity:1;transform:translateX(0);}}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .hero-portrait{display:none;}
+  .hero-stats{gap:18px;}
+}
+
+/* ─────── SECTION SHARED ─────── */
+section{padding:90px 24px;}
+.section-inner{max-width:1280px;margin:0 auto;}
+.section-header{text-align:center;margin-bottom:60px;}
+.section-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,rgba(201,168,76,.1),rgba(201,168,76,.05));
+  color:var(--gold-dark);border-radius:50px;
+  padding:8px 22px;font-size:13px;font-weight:700;
+  margin-bottom:16px;
+  border:1px solid rgba(201,168,76,.25);
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(26px,4vw,42px);
+  font-weight:900;color:var(--navy);
+  margin-bottom:14px;line-height:1.3;
+}
+.section-title span{
+  background:var(--grad-gold);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.section-desc{
+  font-size:16px;color:#5a6a7a;
+  max-width:620px;margin:0 auto;line-height:2;
+}
+
+/* ─────── WHY US (features) ─────── */
+.features-bg{background:var(--white);}
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:22px;
+}
+.feature-card{
+  background:linear-gradient(145deg,#ffffff,#faf6ee);
+  border:1px solid rgba(201,168,76,.12);
+  border-radius:var(--r);padding:30px 22px;
+  text-align:center;transition:all .35s cubic-bezier(.34,1.56,.64,1);
+  position:relative;overflow:hidden;
+}
+.feature-card::before{
+  content:'';position:absolute;
+  top:0;left:0;right:0;height:3px;
+  background:var(--grad-gold);
+  transform:scaleX(0);transition:.35s;
+  border-radius:3px 3px 0 0;
+}
+.feature-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,.12);}
+.feature-card:hover::before{transform:scaleX(1);}
+.feature-icon{
+  width:64px;height:64px;border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;margin:0 auto 16px;transition:.3s;
+  background:linear-gradient(135deg,rgba(201,168,76,.15),rgba(201,168,76,.05));
+  border:1px solid rgba(201,168,76,.2);
+}
+.feature-card:hover .feature-icon{transform:scale(1.1) rotate(5deg);}
+.feature-name{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:8px;}
+.feature-desc{font-size:12.5px;color:#6a7a8a;line-height:1.75;}
+
+/* ─────── LEGAL BRANCHES ─────── */
+.branches-bg{
+  background:linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 100%);
+  position:relative;overflow:hidden;
+}
+.branches-bg::before{
+  content:'⚖';
+  position:absolute;right:-60px;top:50%;
+  transform:translateY(-50%);
+  font-size:500px;color:rgba(201,168,76,.03);
+  line-height:1;pointer-events:none;
+}
+.branches-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:20px;
+}
+.branch-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(201,168,76,.15);
+  border-radius:var(--r);padding:28px 22px;
+  text-align:center;transition:all .35s;
+  position:relative;overflow:hidden;
+  cursor:pointer;
+}
+.branch-card::after{
+  content:'';position:absolute;
+  inset:0;border-radius:var(--r);
+  background:linear-gradient(135deg,rgba(201,168,76,.08),transparent);
+  opacity:0;transition:.35s;
+}
+.branch-card:hover{transform:translateY(-8px);border-color:rgba(201,168,76,.45);box-shadow:0 20px 50px rgba(0,0,0,.4);}
+.branch-card:hover::after{opacity:1;}
+.branch-icon{font-size:38px;margin-bottom:12px;display:block;}
+.branch-name{font-size:15px;font-weight:800;color:var(--gold-light);margin-bottom:8px;}
+.branch-desc{font-size:12px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:16px;}
+.btn-wa-branch{
+  display:inline-flex;align-items:center;gap:6px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;padding:9px 18px;border-radius:50px;
+  font-size:12px;font-weight:700;text-decoration:none;
+  transition:all .3s;
+  box-shadow:0 4px 12px rgba(37,211,102,.3);
+}
+.btn-wa-branch:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(37,211,102,.5);}
+
+/* ─────── HOT CASES ─────── */
+.cases-bg{background:var(--cream);}
+.cases-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:22px;
+}
+.case-card{
+  background:var(--white);
+  border-radius:var(--r);
+  border:1px solid rgba(201,168,76,.1);
+  padding:28px 24px;
+  transition:all .35s cubic-bezier(.34,1.56,.64,1);
+  position:relative;overflow:hidden;
+}
+.case-card::before{
+  content:'';position:absolute;
+  right:0;top:0;bottom:0;
+  width:4px;
+  background:var(--grad-gold);
+  border-radius:0 var(--r) var(--r) 0;
+  transform:scaleY(0);transition:.35s;
+  transform-origin:bottom;
+}
+.case-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.12);}
+.case-card:hover::before{transform:scaleY(1);}
+.case-tag{
+  display:inline-block;
+  background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.06));
+  color:var(--gold-dark);
+  border:1px solid rgba(201,168,76,.25);
+  border-radius:20px;padding:4px 12px;
+  font-size:11px;font-weight:700;
+  margin-bottom:12px;
+}
+.case-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:8px;line-height:1.4;}
+.case-desc{font-size:13px;color:#6a7a8a;line-height:1.75;margin-bottom:16px;}
+.case-urgency{
+  display:flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:700;color:var(--accent,#e63946);
+  margin-bottom:12px;
+}
+.urgency-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#e63946;
+  animation:blink 1.5s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+.btn-wa-case{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--grad-gold);
+  color:var(--navy);padding:10px 20px;border-radius:50px;
+  font-size:13px;font-weight:800;text-decoration:none;
+  transition:all .3s;box-shadow:var(--shadow-gold);
+}
+.btn-wa-case:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(201,168,76,.5);}
+
+/* ─────── CONSULTATION BANNER ─────── */
+.consult-banner{
+  background:var(--grad-navy);
+  border:1px solid rgba(201,168,76,.2);
+  border-radius:24px;
+  padding:50px 48px;
+  text-align:center;
+  position:relative;overflow:hidden;
+  margin-top:20px;
+}
+.consult-banner::before{
+  content:'⚖';
+  position:absolute;left:-40px;top:50%;
+  transform:translateY(-50%);
+  font-size:220px;opacity:.04;
+  color:var(--gold);
+}
+.consult-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(22px,3vw,36px);
+  font-weight:900;color:var(--white);
+  margin-bottom:12px;
+}
+.consult-sub{font-size:16px;color:rgba(255,255,255,.75);margin-bottom:32px;line-height:1.9;}
+
+/* ─────── TESTIMONIALS ─────── */
+.testimonials-bg{background:var(--white);}
+.testimonials-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:22px;
+}
+.testi-card{
+  background:linear-gradient(145deg,#ffffff,#faf6ee);
+  border-radius:var(--r);padding:30px 26px;
+  border:1px solid rgba(201,168,76,.12);
+  transition:all .3s;position:relative;overflow:hidden;
+}
+.testi-card::before{
+  content:'"';
+  position:absolute;top:-10px;left:20px;
+  font-size:90px;
+  color:var(--gold);opacity:.07;
+  font-family:'Playfair Display',serif;
+  line-height:1;
+}
+.testi-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.1);}
+.stars{color:var(--gold);font-size:15px;margin-bottom:12px;letter-spacing:2px;}
+.testi-text{font-size:14px;color:#3a4a5a;line-height:1.9;margin-bottom:20px;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.testi-avatar{
+  width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;
+  background:linear-gradient(135deg,rgba(201,168,76,.15),rgba(201,168,76,.05));
+  border:1px solid rgba(201,168,76,.3);
+}
+.testi-name{font-weight:800;font-size:14px;color:var(--navy);}
+.testi-role{font-size:11px;color:var(--text-muted);margin-top:2px;}
+
+/* ─────── FAQ ─────── */
+.faq-bg{background:var(--cream);}
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+.faq-item{
+  background:var(--white);
+  border:1px solid rgba(201,168,76,.12);
+  border-radius:var(--r-sm);overflow:hidden;
+  transition:.3s;
+}
+.faq-item:hover{box-shadow:0 8px 30px rgba(0,0,0,.07);}
+.faq-q{
+  padding:18px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  cursor:pointer;gap:16px;
+  font-size:15px;font-weight:700;color:var(--navy);user-select:none;
+}
+.faq-q:hover{color:var(--gold-dark);}
+.faq-icon{
+  width:28px;height:28px;
+  background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.05));
+  border:1px solid rgba(201,168,76,.25);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;transition:.3s;color:var(--gold-dark);font-weight:800;
+}
+.faq-a{
+  max-height:0;overflow:hidden;transition:.4s ease;
+  padding:0 22px;font-size:13.5px;color:#6a7a8a;line-height:1.9;
+}
+.faq-item.open .faq-a{max-height:200px;padding:0 22px 18px;}
+.faq-item.open .faq-icon{background:var(--grad-gold);color:var(--navy);transform:rotate(45deg);border-color:transparent;}
+
+/* ─────── FOOTER ─────── */
+footer{
+  background:var(--navy);
+  color:rgba(255,255,255,.8);
+  padding:60px 24px 28px;
+  border-top:2px solid rgba(201,168,76,.2);
+}
+.footer-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  margin-bottom:28px;
+}
+@media(max-width:800px){.footer-inner{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.footer-inner{grid-template-columns:1fr;}}
+.footer-logo-wrap{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.footer-logo-icon{
+  width:42px;height:42px;background:var(--grad-gold);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;
+}
+.footer-logo-txt{
+  font-family:'Playfair Display',serif;
+  font-size:20px;font-weight:800;color:var(--gold-light);
+}
+.footer-about{font-size:13px;line-height:1.9;max-width:280px;color:rgba(255,255,255,.65);}
+.footer-social{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap;}
+.soc-btn{
+  width:38px;height:38px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;text-decoration:none;transition:all .3s;
+  border:1px solid rgba(201,168,76,.2);color:var(--gold-light);
+}
+.soc-btn:hover{transform:translateY(-4px);background:var(--gold);color:var(--navy);border-color:var(--gold);}
+.footer-col-title{
+  font-size:14px;font-weight:800;color:var(--gold-light);
+  margin-bottom:16px;letter-spacing:.3px;
+}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links a{
+  color:rgba(255,255,255,.6);text-decoration:none;
+  font-size:13px;transition:.2s;display:flex;align-items:center;gap:6px;
+}
+.footer-links a:hover{color:var(--gold-light);padding-right:5px;}
+.footer-bottom{
+  text-align:center;font-size:12px;
+  color:rgba(255,255,255,.35);
+  max-width:1280px;margin:0 auto;
+}
+.footer-bottom strong{color:var(--gold-light);}
+
+/* ─────── FLOATING WA ─────── */
+.wa-float{
+  position:fixed;bottom:26px;left:26px;
+  z-index:9999;
+  display:flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:white;padding:14px 22px;border-radius:50px;
+  text-decoration:none;font-size:14px;font-weight:800;
+  box-shadow:0 8px 30px rgba(37,211,102,.55);
+  transition:all .3s;
+  animation:waFloat 3s ease-in-out infinite;
+}
+.wa-float:hover{transform:scale(1.06);box-shadow:0 14px 40px rgba(37,211,102,.7);}
+@keyframes waFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+.wa-float-icon{font-size:20px;}
+@media(max-width:600px){.wa-float span{display:none;}.wa-float{padding:15px;border-radius:50%;}}
+
+/* ─────── ANIMATIONS ─────── */
+.fade-in{opacity:0;transform:translateY(28px);transition:.7s ease;}
+.fade-in.visible{opacity:1;transform:translateY(0);}
+.fade-in-delay-1{transition-delay:.1s;}
+.fade-in-delay-2{transition-delay:.2s;}
+.fade-in-delay-3{transition-delay:.3s;}
+
+/* ─────── DIVIDER ─────── */
+.gold-divider{
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.3;margin:0;
+}
+</style>
+</head>
+<body>
+
+<!-- Scales background decoration -->
+<div class="scales-bg">
+  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="20" r="5" fill="#c9a84c"/>
+    <line x1="100" y1="20" x2="100" y2="100" stroke="#c9a84c" stroke-width="3"/>
+    <line x1="30" y1="60" x2="170" y2="60" stroke="#c9a84c" stroke-width="3"/>
+    <circle cx="30" cy="60" r="4" fill="#c9a84c"/>
+    <circle cx="170" cy="60" r="4" fill="#c9a84c"/>
+    <ellipse cx="30" cy="100" rx="28" ry="10" stroke="#c9a84c" stroke-width="2"/>
+    <ellipse cx="170" cy="100" rx="28" ry="10" stroke="#c9a84c" stroke-width="2"/>
+    <line x1="30" y1="60" x2="10" y2="100" stroke="#c9a84c" stroke-width="2"/>
+    <line x1="30" y1="60" x2="50" y2="100" stroke="#c9a84c" stroke-width="2"/>
+    <line x1="170" y1="60" x2="148" y2="100" stroke="#c9a84c" stroke-width="2"/>
+    <line x1="170" y1="60" x2="192" y2="100" stroke="#c9a84c" stroke-width="2"/>
+    <rect x="90" y="150" width="20" height="40" fill="#c9a84c"/>
+    <rect x="70" y="185" width="60" height="8" rx="4" fill="#c9a84c"/>
+  </svg>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-scales">⚖️</div>
+      <div class="logo-text">
+        <div class="logo-title">الحسام للمحاماة</div>
+        <div class="logo-sub">مكتب المحامي حسام محمد ابراهيم</div>
+      </div>
+    </a>
+    <nav id="main-nav">
+      <a href="#features">لماذا نحن</a>
+      <a href="#branches">فروع القانون</a>
+      <a href="#cases">أبرز القضايا</a>
+      <a href="#testimonials">آراء العملاء</a>
+      <a href="#faq">أسئلة شائعة</a>
+    </nav>
+    <a href="https://wa.me/201016000360?text=مرحبًا%20المحامي%20حسام%20روما%2C%20أريد%20استشارة%20قانونية%20عاجلة" class="btn-wa-header" target="_blank">
+      📱 استشارة 
+    </a>
+    <button class="menu-toggle" id="menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-photo-bg"></div>
+  <div class="hero-scales-mark">⚖</div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner section-inner">
+    <div class="hero-content">
+      <div class="hero-badge">⚖️ مكتب قانوني متكامل — الاسكندرية ، مصر</div>
+      <div class="hero-name">المحامي <span>|</span> حسام محمد ابراهيم <span>|
+      مكتب الحسام  للمحاماة</span></div>
+      <h1>حقك في يد <span>محامٍ يستحق</span> الثقة</h1>
+      <p class="hero-desc">
+        خبرة قانونية راسخة في جميع فروع القانون — جنائي، مدني، تجاري، عمالي، أحوال شخصية وأكثر.<br>
+        نتعامل مع كل قضية كأنها قضيتنا الشخصية. سرية تامة، سرعة في الإجراءات، ونتائج مثبتة.
+      </p>
+      <div class="hero-btns">
+        <a
+        href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20قانونية%20عاجلة%20مع%20المحامي%20حسام%20محمد"
+        class="btn-gold" target="_blank">
+          📱 استشارة قانونية الآن
+        </a>
+        <a href="#cases" class="btn-outline-gold">
+          ⚖️ أبرز القضايا
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">+500</div>
+          <div class="stat-label">قضية ناجحة</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">سنة خبرة</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">تواصل متاح</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">سرية تامة</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="portrait-frame">
+        <div class="portrait-ring">
+          <div class="portrait-silhouette">
+            <div class="sil-head">👨‍⚖️</div>
+            <div class="sil-body">⚖️</div>
+          </div>
+        </div>
+        <div class="portrait-badge">المحامي حسام محمد ابراهيم</div>
+        <div class="portrait-decor"></div>
+        <div class="portrait-decor2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section class="features-bg" id="features">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-badge">⭐ لماذا تختار مكتب الحسام للمحاماة؟</div>
+      <h2 class="section-title">معايير تجعلنا <span>الخيار الأمثل</span> لموكلينا</h2>
+      <p class="section-desc">نقدم خدمة قانونية احترافية تجمع بين الخبرة والأمانة والسرعة في إنجاز القضايا.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in fade-in-delay-1">
+        <div class="feature-icon">⚖️</div>
+        <div class="feature-name">خبرة قانونية واسعة</div>
+        <div class="feature-desc">أكثر من 15 عاماً في المحاكم المصرية بجميع درجاتها — ابتدائي، استئناف، نقض.</div>
+      </div>
+      <div class="feature-card fade-in fade-in-delay-2">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-name">سرية تامة ومطلقة</div>
+        <div class="feature-desc">كل معلوماتك وقضيتك محمية بالكامل ولا تُكشف لأي طرف ثالث تحت أي ظرف.</div>
+      </div>
+      <div class="feature-card fade-in fade-in-delay-3">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-name">سرعة في الإجراءات</div>
+        <div class="feature-desc">نتحرك بسرعة لحماية حقوقك واستصدار الأحكام القضائية في أسرع وقت ممكن.</div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📋</div>
+        <div class="feature-name">استشارة أولى مجانية</div>
+        <div class="feature-desc">نقدم استشارة قانونية أولية مجانية لتقييم قضيتك وتحديد أفضل الحلول المتاحة.</div>
+      </div>
+      <div class="feature-card fade-in fade-in-delay-1">
+        <div class="feature-icon">📱</div>
+        <div class="feature-name">تواصل 24 ساعة</div>
+        <div class="feature-desc">متاح على مدار الساعة عبر واتساب لأي استفسار عاجل أو طارئ قانوني.</div>
+      </div>
+      <div class="feature-card fade-in fade-in-delay-2">
+        <div class="feature-icon">🤝</div>
+        <div class="feature-name">تمثيل أمام كل المحاكم</div>
+        <div class="feature-desc">نمثل موكلينا أمام جميع المحاكم والنيابات والجهات القضائية في مصر.</div>
+      </div>
+      <div class="feature-card fade-in fade-in-delay-3">
+        <div class="feature-icon">📜</div>
+        <div class="feature-name">صياغة العقود</div>
+        <div class="feature-desc">صياغة ومراجعة العقود التجارية والعقارية والشركات بدقة قانونية عالية.</div>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🏛️</div>
+        <div class="feature-name">خبرة بالقانون المصري</div>
+        <div class="feature-desc">إلمام شامل بالتشريعات والقوانين المصرية وآخر التعديلات والأحكام القضائية.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEGAL BRANCHES ===== -->
+<section class="branches-bg" id="branches">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-badge" style="color:var(--gold-light);background:rgba(201,168,76,.1);border-color:rgba(201,168,76,.3);">⚖️ تخصصاتنا القانونية</div>
+      <h2 class="section-title" style="color:white;">نغطي <span>جميع فروع القانون</span></h2>
+      <p class="section-desc" style="color:rgba(255,255,255,.65);">مكتب متكامل يضم خبراء في كل تخصص قانوني لضمان أفضل دفاع ممكن عن حقوقك.</p>
+    </div>
+    <div class="branches-grid">
+      <div class="branch-card fade-in fade-in-delay-1">
+        <span class="branch-icon">🔨</span>
+        <div class="branch-name">القانون الجنائي</div>
+        <div class="branch-desc">دفاع في جرائم الجنح والجنايات، التحقيق مع النيابة، الاستئناف والنقض.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20القانون%20الجنائي" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-2">
+        <span class="branch-icon">🏠</span>
+        <div class="branch-name">القانون المدني</div>
+        <div class="branch-desc">دعاوى المسؤولية المدنية، التعويضات، العقود، الالتزامات والحقوق.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20القانون%20المدني" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-3">
+        <span class="branch-icon">💼</span>
+        <div class="branch-name">القانون التجاري</div>
+        <div class="branch-desc">تأسيس الشركات، العقود التجارية، منازعات الأعمال، الإفلاس والتسوية.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20القانون%20التجاري" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in">
+        <span class="branch-icon">👨‍👩‍👧</span>
+        <div class="branch-name">الأحوال الشخصية</div>
+        <div class="branch-desc">الطلاق، الخلع، الحضانة، النفقة، الميراث، الوصاية وإثبات النسب.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20الأحوال%20الشخصية" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-1">
+        <span class="branch-icon">🏗️</span>
+        <div class="branch-name">القانون العقاري</div>
+        <div class="branch-desc">بيع وشراء العقارات، فرز وتقسيم، دعاوى الإزالة والتسليم، التوثيق.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20القانون%20العقاري" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-2">
+        <span class="branch-icon">👷</span>
+        <div class="branch-name">قانون العمل</div>
+        <div class="branch-desc">فصل تعسفي، مستحقات العمال، إصابات العمل، عقود العمل والتأمينات.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20قانون%20العمل" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-3">
+        <span class="branch-icon">🏦</span>
+        <div class="branch-name">القانون البنكي والمالي</div>
+        <div class="branch-desc">قضايا البنوك، الشيكات، الكمبيالات، التمويل العقاري وإعادة الجدولة.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20القانون%20البنكي" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in">
+        <span class="branch-icon">⚡</span>
+        <div class="branch-name">القانون الإداري</div>
+        <div class="branch-desc">دعاوى الإلغاء، طعون الموظفين، التظلمات الإدارية، مجلس الدولة.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20القانون%20الإداري" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-1">
+        <span class="branch-icon">🌐</span>
+        <div class="branch-name">قانون الإنترنت والجرائم الإلكترونية</div>
+        <div class="branch-desc">جرائم السوشيال ميديا، الابتزاز الإلكتروني، انتهاك الخصوصية، قانون 175.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20الجرائم%20الإلكترونية" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-2">
+        <span class="branch-icon">🏢</span>
+        <div class="branch-name">قانون الشركات</div>
+        <div class="branch-desc">تأسيس وتصفية الشركات، نزاعات الشركاء، الاندماج والاستحواذ.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20قانون%20الشركات" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in fade-in-delay-3">
+        <span class="branch-icon">🚗</span>
+        <div class="branch-name">حوادث السيارات</div>
+        <div class="branch-desc">تعويضات حوادث المرور، قضايا التأمين، الوفاة والإصابات الجسيمة.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20قضايا%20حوادث%20السيارات" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+      <div class="branch-card fade-in">
+        <span class="branch-icon">📜</span>
+        <div class="branch-name">التوثيق والعقود</div>
+        <div class="branch-desc">صياغة ومراجعة جميع أنواع العقود القانونية وتوثيقها رسمياً.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20التوثيق%20والعقود" class="btn-wa-branch" target="_blank">📱 استشر الآن</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOT CASES ===== -->
+<section class="cases-bg" id="cases">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-badge">🔥 أبرز القضايا المطلوبة</div>
+      <h2 class="section-title">القضايا التي <span>يبحث عنها الناس</span> كثيراً</h2>
+      <p class="section-desc">لا تنتظر — هذه القضايا تحتاج إلى تحرك قانوني فوري. كلمنا الآن وسنحمي حقك.</p>
+    </div>
+    <div class="cases-grid">
+
+      <div class="case-card fade-in fade-in-delay-1">
+        <div class="case-tag">جنائي</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> طارئ — تصرف الآن</div>
+        <div class="case-title">الاحتجاز والقبض التعسفي</div>
+        <div class="case-desc">إذا تم القبض عليك أو على أحد أفراد عائلتك بشكل تعسفي، نتدخل فوراً لطلب الإفراج وإلغاء الأوامر.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20المحامي%20حسام%2C%20تم%20القبض%20على%20شخص%20أعرفه%20وأريد%20مساعدة%20قانونية%20عاجلة" class="btn-wa-case" target="_blank">📱 مساعدة عاجلة</a>
+      </div>
+
+      <div class="case-card fade-in fade-in-delay-2">
+        <div class="case-tag">أحوال شخصية</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> الأكثر طلباً</div>
+        <div class="case-title">الطلاق والخلع والحضانة</div>
+        <div class="case-desc">نتولى قضايا الطلاق بجميع أنواعه والخلع وتحديد حضانة الأطفال والنفقة بأسرع إجراءات.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20قضية%20طلاق%20وحضانة" class="btn-wa-case" target="_blank">📱 استشر الآن</a>
+      </div>
+
+      <div class="case-card fade-in fade-in-delay-3">
+        <div class="case-tag">عقاري</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> مهم جداً</div>
+        <div class="case-title">نزاعات الملكية والإزالة</div>
+        <div class="case-desc">حماية ملكيتك العقارية من الغصب والتعدي واستصدار أحكام الإزالة وإثبات الملكية.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20نزاع%20على%20ملكية%20عقار" class="btn-wa-case" target="_blank">📱 استشر الآن</a>
+      </div>
+
+      <div class="case-card fade-in">
+        <div class="case-tag">مالي</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> شائعة جداً</div>
+        <div class="case-title">قضايا الشيكات والديون</div>
+        <div class="case-desc">إيقاف التنفيذ على الشيكات المرتجعة، مديونيات البنوك، إعادة جدولة الديون والكمبيالات.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20قضية%20شيكات%20أو%20ديون" class="btn-wa-case" target="_blank">📱 استشر الآن</a>
+      </div>
+
+      <div class="case-card fade-in fade-in-delay-1">
+        <div class="case-tag">عمالي</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> حق مكفول</div>
+        <div class="case-title">الفصل التعسفي ومستحقات العمل</div>
+        <div class="case-desc">استرداد حقوقك من الفصل التعسفي، مكافأة نهاية الخدمة، العلاوات والتأمينات الاجتماعية.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20قضية%20فصل%20تعسفي" class="btn-wa-case" target="_blank">📱 استشر الآن</a>
+      </div>
+
+      <div class="case-card fade-in fade-in-delay-2">
+        <div class="case-tag">إلكتروني</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> تزايد سريع</div>
+        <div class="case-title">الابتزاز الإلكتروني والتشهير</div>
+        <div class="case-desc">حماية فورية من الابتزاز عبر الإنترنت وحذف المحتوى المسيء ومقاضاة المبتزين قانونياً.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أتعرض%20لابتزاز%20إلكتروني%20وأريد%20مساعدة%20قانونية%20عاجلة" class="btn-wa-case" target="_blank">📱 مساعدة عاجلة</a>
+      </div>
+
+      <div class="case-card fade-in fade-in-delay-3">
+        <div class="case-tag">إداري</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> مهم للموظفين</div>
+        <div class="case-title">الطعن في القرارات الإدارية</div>
+        <div class="case-desc">الطعن في قرارات الفصل والنقل وإلغاء القرارات الإدارية الظالمة أمام مجلس الدولة.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20الطعن%20في%20قرار%20إداري%20ظالم" class="btn-wa-case" target="_blank">📱 استشر الآن</a>
+      </div>
+
+      <div class="case-card fade-in">
+        <div class="case-tag">ميراث</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> حساسة جداً</div>
+        <div class="case-title">قضايا الميراث وتقسيم التركة</div>
+        <div class="case-desc">إثبات الوراثة، تقسيم التركة، الوصاية على القاصرين واسترداد حق الوارث المظلوم.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20قضية%20ميراث" class="btn-wa-case" target="_blank">📱 استشر الآن</a>
+      </div>
+
+      <div class="case-card fade-in fade-in-delay-1">
+        <div class="case-tag">تجاري</div>
+        <div class="case-urgency"><span class="urgency-dot"></span> للشركات والأعمال</div>
+        <div class="case-title">نزاعات الشركاء والعقود التجارية</div>
+        <div class="case-desc">حل نزاعات الشركاء، إنهاء الشراكات القانونية، التقاضي في العقود التجارية المخالفة.</div>
+        <a href="https://wa.me/201016000360?text=مرحبًا%20أريد%20استشارة%20في%20نزاع%20شركاء%20تجاري" class="btn-wa-case" target="_blank">📱 استشر الآن</a>
+      </div>
+
+    </div>
+
+    <!-- Consultation CTA -->
+    <div class="consult-banner fade-in" style="margin-top:50px;">
+      <div class="consult-title">لا تنتظر حتى تضيع حقوقك</div>
+      <div class="consult-sub">
+        كل يوم تأخير في القضايا القانونية قد يكلفك الكثير.<br>
+        كلمنا الآن واحصل على استشارتك القانونية الأولى مجاناً.
+      </div>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="https://wa.me/201016000360?text=مرحبًا%20المحامي%20حسام%20روما%2C%20أريد%20استشارة%20قانونية%20مجانية%20الآن" class="btn-gold" target="_blank" style="font-size:17px;padding:18px 40px;">
+          📱 استشارة مجانية الآن
+        </a>
+        <a href="tel:01016000360" class="btn-outline-gold" style="font-size:17px;padding:18px 40px;">
+          📞 اتصل بنا
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-bg" id="testimonials">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-badge">💬 آراء موكلينا</div>
+      <h2 class="section-title">كلام <span>الحق</span> من أصحابه</h2>
+      <p class="section-desc">أكثر من 500 موكل وثقوا بمكتب روما للمحاماة وحققوا نتائج قانونية حقيقية.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">الأستاذ حسام محمد ابراهيم من أفضل المحامين اللي تعاملت معاهم. كانت عندي قضية طلاق معقدة وعالجها باحترافية عالية. النتيجة كانت لصالحي بالكامل وفي وقت قياسي. شكراً جزيلاً.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div>
+            <div class="testi-name">محمد إبراهيم</div>
+            <div class="testi-role">موكل — قضية أحوال شخصية</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in fade-in-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">اتعرضت لابتزاز إلكتروني وكنت خايفة جداً. الأستاذ حسام تصرف بسرعة وسرية تامة وتم إيقاف المبتزز وحذف المحتوى. ربنا يحميه ويجزيه خيراً.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div>
+            <div class="testi-name">س. م.</div>
+            <div class="testi-role">موكلة — قضية ابتزاز إلكتروني</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in fade-in-delay-2">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">كان عندي نزاع على ملكية شقة دام سنين. بعد ما وكّلت
+        الأستاذ حسام محمد ابراهيم اتحل الموضوع في أقل من سنة وأثبتنا حقنا أمام المحكمة.
+        خبرته واضحة من أول لقاء.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div>
+            <div class="testi-name">أحمد السيد</div>
+            <div class="testi-role">موكل — قضية نزاع عقاري</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in fade-in-delay-3">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">اتفصلت من شغلي بشكل تعسفي وما ضيّعوش حقوقي. الأستاذ حسام رفع القضية واسترديت كل مستحقاتي كاملة. محامي ذو ضمير وأمانة حقيقية. أنصح بيه بشدة.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div>
+            <div class="testi-name">نهى عبد الرحمن</div>
+            <div class="testi-role">موكلة — قضية فصل تعسفي</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">محتاج كنت صياغة عقد شراكة تجارية مهم. الأستاذ حسام صاغه بدقة قانونية عالية ونبّهني على بنود كانت ممكن تضرني. توفير وقت وحماية حقيقية.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👨</div>
+          <div>
+            <div class="testi-name">كريم طارق</div>
+            <div class="testi-role">موكل — صياغة عقد شراكة</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-in fade-in-delay-1">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">كان عندنا نزاع ميراث معقد بين الورثة. الأستاذ حسام أدار الموضوع بحكمة وعلم وأنهى القضية بالتراضي مع حفاظ حق كل الورثة. محامي موثوق ومحترم.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">👩</div>
+          <div>
+            <div class="testi-name">فاطمة الزهراء</div>
+            <div class="testi-role">موكلة — قضية توزيع ميراث</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-bg" id="faq">
+  <div class="section-inner">
+    <div class="section-header fade-in">
+      <div class="section-badge">❓ الأسئلة الشائعة</div>
+      <h2 class="section-title">كل ما <span>يدور في بالك</span> — نجاوبك</h2>
+      <p class="section-desc">للاستفسارات الإضافية، تواصل معنا مباشرة على واتساب وسنرد فوراً.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">هل الاستشارة الأولى مجانية؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">نعم، نقدم استشارة قانونية أولية مجانية لتقييم وضعك القانوني وتحديد أفضل مسار للقضية. تواصل معنا عبر واتساب وسنرد في أقرب وقت.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">ما هي مناطق تغطية مكتب الحسام للمحاماة؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">يتمركز مكتبنا في القاهرة ونمثل موكلينا أمام محاكم القاهرة والجيزة وجميع محاكم مصر، بما في ذلك محكمة النقض ومجلس الدولة.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">كيف أحدد موعداً للمقابلة؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">فقط أرسل رسالة على واتساب 01016000360 أو اتصل بنا وسنحدد موعداً ملائماً. يمكن أيضاً إجراء الاستشارة عبر مكالمة واتساب إذا لم تتمكن من الحضور.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">هل معلوماتي وقضيتي سرية؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">بالتأكيد. السرية المهنية من أهم ما يميزنا. جميع بيانات الموكلين محمية بموجب قانون المحاماة ولا تُكشف لأي طرف ثالث تحت أي ظرف كان.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">ما هي تكلفة الخدمات القانونية؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">تختلف الأتعاب حسب نوع القضية وتعقيدها. نناقش الأتعاب بشفافية كاملة في بداية التعامل دون أي رسوم مخفية. الاستشارة الأولى مجانية دائماً.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">كم تستغرق القضايا عادةً؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">تعتمد المدة على نوع القضية ودرجة المحكمة. نعمل على تسريع الإجراءات قدر المستطاع مع الحفاظ على جودة الدفاع. نوفر تحديثات دورية للموكل طوال مراحل القضية.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">هل يمكن التواصل خارج ساعات العمل؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">نعم، نحن متاحون 24 ساعة عبر واتساب للحالات العاجلة. للقضايا الطارئة كالاحتجاز والاعتقال، نتحرك فوراً في أي وقت.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">هل تقدمون خدمات للشركات؟<span class="faq-icon">+</span></div>
+        <div class="faq-a">بالتأكيد. نقدم خدمات قانونية متكاملة للشركات تشمل: صياغة العقود، تأسيس الشركات، حل النزاعات التجارية، وتمثيل الشركات أمام المحاكم.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo-wrap">
+        <div class="footer-logo-icon">⚖️</div>
+        <div class="footer-logo-txt">الحسام للمحاماة</div>
+      </div>
+      <p class="footer-about">مكتب المحامي حسام محمد ابراهيم — خبرة قانونية راسخة في جميع فروع القانون. نحن معك في كل خطوة حتى ينتصر الحق.</p>
+      <div style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.5);">📍 القاهرة، جمهورية مصر العربية</div>
+      <div class="footer-social">
+        <a href="https://wa.me/201000902058" class="soc-btn" title="واتساب" target="_blank">📱</a>
+        <a href="#" class="soc-btn" title="فيسبوك" target="_blank">📘</a>
+        <a href="#" class="soc-btn" title="إنستجرام" target="_blank">📷</a>
+        <a href="#" class="soc-btn" title="يوتيوب" target="_blank">▶️</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">فروع القانون</div>
+      <ul class="footer-links">
+        <li><a href="#branches">⚖ الجنائي</a></li>
+        <li><a href="#branches">⚖ المدني</a></li>
+        <li><a href="#branches">⚖ التجاري</a></li>
+        <li><a href="#branches">⚖ العمالي</a></li>
+        <li><a href="#branches">⚖ الأحوال الشخصية</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">أبرز القضايا</div>
+      <ul class="footer-links">
+        <li><a href="#cases">⚖ الطلاق والحضانة</a></li>
+        <li><a href="#cases">⚖ الشيكات والديون</a></li>
+        <li><a href="#cases">⚖ العقارات</a></li>
+        <li><a href="#cases">⚖ الابتزاز الإلكتروني</a></li>
+        <li><a href="#cases">⚖ الميراث</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">تواصل معنا</div>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/201016000360" target="_blank">📱 01016000360</a></li>
+        <li><a href="tel:01016000360">📞 اتصل بنا</a></li>
+        <li><a href="#faq">❓ الأسئلة الشائعة</a></li>
+        <li><a href="#testimonials">💬 آراء الموكلين</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <strong>مكتب الحسام للمحاماة</strong> — المحامي حسام محمد ابراهيم · القاهرة، مصر · جميع الحقوق محفوظة ⚖️</p>
+  </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/201016000360?text=مرحبًا%20المحامي%20حسام%20محمد%2C%20أريد%20استشارة%20قانونية" class="wa-float" target="_blank">
+  <span class="wa-float-icon">📱</span>
+  <span>استشارة قانونية مجانية</span>
+</a>
+
+<script>
+  // Header scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const nav = document.getElementById('main-nav');
+  menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  // FAQ
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
